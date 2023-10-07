@@ -15,7 +15,7 @@ const submitFormHandler = async (e) => {
   const period = interval.value;
 
   const res = await fetch(
-    `http://localhost:8000/api/search?symbol=${ticker}&period=${period}`
+    `https://zerodha-task-backend.onrender.com/api/search?symbol=${ticker}&period=${period}`
   );
 
   data.value = await res.json();
